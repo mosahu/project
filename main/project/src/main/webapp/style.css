@@ -1,0 +1,103 @@
+@charset "UTF-8";
+	/*공통 css*/
+	a {color: #000;text-decoration: none;display:block}
+	ul{list-style:none; padding-left: 0px; margin:0px}
+	.wrapper{width:1000px; margin: 0 auto;}
+
+	/*header_box css*/
+	#header_box{}
+	#header_box .flex{height: 70px;display: flex; justify-content: space-between;align-items: center;flex-wrap: wrap; border-bottom: 1px solid #000;}
+	#header_box .flex li a img{width: 50px;padding:10px;}
+    #header_box .m_menu{display:flex; padding-right: 20px}
+	
+
+	/*m-menu css*/
+    .m-menu{width: 25px; height: 20px; position: relative;padding-right:30px;}
+    .flex .m_menu .logo{padding-left:20px;}
+    .m-menu span{display: block; background: #000; height: 2px; position: absolute; width: 50%; transition: all 0.3s;}
+    .m-menu .top{top: 0px;}
+    .m-menu .middle{top: 9px;}
+    .m-menu .bottom{bottom: 0px;}
+    .m-menu .join_box{display: flex;justify-content: center;flex-wrap: wrap;}
+    .m-menu .join_box a{padding : 0px 20px;}
+
+
+	/*메뉴에 올렸을때 X자만들기*/
+    .m-menu.active .top{transform: rotate(45deg);top: 10px;}
+    .m-menu.active .middle{opacity: 0;}
+    .m-menu.active .bottom{transform: rotate(-45deg); bottom: 8px;}
+
+
+    /*메뉴눌렀을때 사이드바 */
+    .m-menu .sidebar {width: 200px;height: 100%;background:#eee; opacity:0.7;top: 80px;right: -300px;transition: all .35s; position: fixed;}
+    .m-menu.active .sidebar{right:0;}
+        
+    /*사이드바 메뉴*/
+    .sidebar ul {text-align: center;}
+   	.menu_box li{margin-top:30px;}
+   	.menu_box #search{width: 130px;padding:10px;background-image:url(img/search_basic.png); background-size:13px; background-position:right;background-repeat:no-repeat;}
+   
+       
+    /*main css*/
+    .main {width: 100%;margin: 0 auto;background-color: #fff;display:flex;flex-wrap: wrap; flex-direction: row-reverse;padding-top: 30px;}
+    .main h2 {margin: 0 auto;}
+    .main ul {display: flex;flex-wrap: wrap;margin: 0px;margin-left: 10%;}
+    .main ul li {width: 45%;border-radius: 50px;padding: 15px;margin: 30px 0px;}
+    .main ul li img {width: 300px;height: 300px;border-radius: 50%;transition: 0.5s ease-in-out;overflow: hidden;}
+    .main ul li img:hover {transform: rotateY(180deg)}
+    .main .top_bt img {width: 20px;height: 20px;}
+	.main .top_bt{float: right;}
+	
+	
+    /*footer_box css*/
+    #footer_box ul{text-align: center;}
+
+
+    /*login css*/
+    .login{text-align: center;}
+    .login ul{width: 400px;margin: 0 auto;}
+    .login a{display:inline;}
+    .login ul li{padding: 10px;}
+    .ligin .flex{display: flex;}
+
+    .login input{padding: 15px; border-radius: 10px; border: 1px solid #bbb;}
+    .login input::placeholder{color: black}
+    .login input[type="text"]{width:300px; text-align: center; color: #000;}
+    .login input[type="password"]{width:300px; text-align: center;}
+
+    .login .id_pw_search{text-align: right;font-size: 11px;padding-right: 50px;}
+    .login .id_pw_search span{font-size: 11px}
+
+    .login .login_button span{padding: 0px 20px;}
+    .login .login_button span input{width: 120px;}
+    .login .login_button span input[type="button"]{background: #363b9c; color:#fff}
+
+    .login .kakao p{background: #F7E600; width: 300px;margin:0 auto; padding:10px; border-radius: 10px;}
+    .login .kakao a{color:#3A1D1D;}
+    
+    .login .naver p{background: #2db400; width: 300px;margin:0 auto; padding:10px; border-radius: 10px;color:#fff}
+    .login .naver a{color:#fff}
+    
+    	
+	/*join_box css*/
+	.join_box{text-align: center;}
+	.join_box input[type="text"]{width: 200px;padding: 10px; text-align:center;  border-radius: 10px; border: 1px solid #bbb;}
+	.join_box input[type="password"]{width: 200px;padding: 10px; text-align:center; border-radius: 10px;border: 1px solid #bbb;}
+	.join_box input[type= "button"]{width: 80px;padding: 10px;  border-radius: 10px;border: 1px solid #bbb;	}
+	.join_box ul li{padding : 10px}
+	.join_box .double input{margin-right:20px;}
+	.join_box .double input[type="button"]{margin-left:20px;}
+	.join_box .alone input{margin-right: 145px;}
+	.join_box ul li input[type="submit"]{padding: 20px; font-size:20px;color:#fff;background: #363b9c;border: 1px solid #bbb;border-radius:10px;margin-top:20px}
+	.join_box #member_addr{width: 250px;margin-right: 25px;}
+	.join_box #add{width: 335px; margin-right: 15px}
+	.join_box #member_post{width:50px; margin-left:0px}
+	.join_box #email{width:335px; margin-right:15px}
+	
+	/*require css*/
+	.require{border: 1px solid #000; width: 500px; margin: 0 auto;}
+	
+	/*joinContract_box css*/
+	.joinContract_box{text-align: center;}
+	.joinContract_box input[type="button"]{padding: 20px;font-size: 20px; color: #fff;background: #363b9c;border: 1px solid #bbb; border-radius: 10px; margin-top: 20px;}
+	.joinContract_box #check_list li{padding-top: 30px}
